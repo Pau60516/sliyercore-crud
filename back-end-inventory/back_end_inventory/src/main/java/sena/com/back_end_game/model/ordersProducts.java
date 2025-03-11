@@ -8,23 +8,22 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
-@Entity(name = "orders")
-public class orders {
+@Entity(name = "ordersProducts")
+public class ordersProducts {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "orderID", nullable = false)
+    @Column(name = "order_id", nullable = false)
     private int order_id;
 
     @ManyToOne
-    @JoinColumn(name = "customerID", nullable = false)
-    private customers customer;
+    @JoinColumn(name = "productID", nullable = false)
+    private products product;
 
-    @Column(name = "date")
-    private java.time.LocalDateTime date;
+    @Column(name = "quantity")
+    private int quantity;
 
-    @Column(name = "total", precision = 10, scale = 2)
-    private double total;
-
-    @Column(name = "status", nullable = false)
-    private String status;
+    @Column(name = "unitPrice", precision = 10, scale = 2)
+    private double unitPrice;
 }
+
