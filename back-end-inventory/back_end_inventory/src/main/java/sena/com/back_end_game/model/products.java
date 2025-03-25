@@ -11,8 +11,8 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 
-@Entity(name="products")
-public class products {
+@Entity(name="Products")
+public class Products {
        @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="product_id")
@@ -20,11 +20,11 @@ public class products {
 
     @ManyToOne
     @JoinColumn(name = "brand_id", nullable = false)
-    private brands brand;
+    private Brands brand;
 
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
-    private categories category;
+    private Categories category;
 
     @Column(name = "name", length = 50, nullable = false)
     private String name;
@@ -37,5 +37,64 @@ public class products {
 
     @Column(name = "price", nullable = false)
     private Number price;
+
+
+public Products (int product_id, Brands brand, Categories category, String name, String color, TextStyle description, Number price ){
+    this.product_id = product_id;
+    this.brand = brand;
+    this.category = category;
+    this.name = name;
+    this.color = color;
+    this.description = description;
+    this.price = price;
+ }
+
+ public int getproduct_id() {
+    return product_id;
+ }
+
+ public void setproduct_id(int product_id){
+    this.product_id=product_id;
+ }
+
+public Brands get_brand() {
+  return brand;
+ }
+
+public void set_brand(Brands brand){
+     this.brand=brand;
+ }
+
+ public Categories get_category() {
+    return category;
+   }
+  
+  public void set_category(Categories category){
+       this.category=category;
+  }
+
+  public String get_name() {
+    return name;
+   }
+  
+  public void set_name(String name){
+       this.name=name;
+  }
+
+  public String get_color() {
+    return color;
+   }
+  
+  public void setcolor(String color){
+       this.color=color;
+  }
+
+  public TextStyle get_description() {
+    return description;
+   }
+  
+  public void setdescription(TextStyle description){
+       this.description=description;
+  }
 
 }

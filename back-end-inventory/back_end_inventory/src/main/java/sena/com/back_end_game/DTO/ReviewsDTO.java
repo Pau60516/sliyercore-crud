@@ -1,37 +1,19 @@
-package sena.com.back_end_game.model;
+package sena.com.back_end_game.DTO;
 
-import jakarta.persistence.*;
+import sena.com.back_end_game.model.Customers;
+import sena.com.back_end_game.model.Products;
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "Reviews")
-public class Reviews {
+public class ReviewsDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "review_id", nullable = false)
     private int reviewId;
-
-    @ManyToOne
-    @JoinColumn(name = "customer_id", nullable = false)
     private Customers customer;
-
-    @ManyToOne
-    @JoinColumn(name = "product_id", nullable = false)
     private Products product;
-
-    @Column(name = "rating", nullable = false)
     private int rating;
-
-    @Column(name = "comment")
     private String comment;
-
-    @Column(name = "date", nullable = false)
     private LocalDateTime date;
 
-    public Reviews() {}
-
-    public Reviews(int reviewId, Customers customer, Products product, int rating, String comment, LocalDateTime date) {
+    public ReviewsDTO(int reviewId, Customers customer, Products product, int rating, String comment, LocalDateTime date) {
         this.reviewId = reviewId;
         this.customer = customer;
         this.product = product;
@@ -88,5 +70,7 @@ public class Reviews {
         this.date = date;
     }
 }
+
+
 
 
