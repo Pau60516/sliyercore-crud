@@ -28,35 +28,35 @@ public class Suppliers {
         this.phone = phone;
      }
 
-     public int getsupplier_id() {
+     public int getSupplier_Id() {
         return supplier_id;
      }
 
-     public void setsupplier_id(int supplier_id){
+     public void setSupplier_Id(int supplier_id){
         this.supplier_id=supplier_id;
      }
 
-    public String get_name() {
+    public String getName() {
       return name;
      }
     
-    public void set_name(String name){
+    public void setName(String name){
          this.name=name;
      }
 
-     public String get_country() {
+     public String getCountry() {
         return country;
        }
       
-      public void set_country(String country){
+      public void setCountry(String country){
            this.country=country;
       }
 
-      public String get_phone() {
+      public String getPhone() {
         return phone;
        }
       
-      public void set_phone(String phone){
+      public void setPhone(String phone){
            this.phone=phone;
       }
 }

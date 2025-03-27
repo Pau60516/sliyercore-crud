@@ -12,19 +12,19 @@ public class BrandsDTO {
 
         }
     
-        public String getNombre() {
+        public String get_name() {
             return name;
         }
     
-        public void setNombre(String name) {
+        public void set_name(String name) {
             this.name = name;
         }
     
-        public String getoriginCountry() {
+        public String get_originCountry() {
             return originCountry;
         }
     
-        public void setoriginCountry(String originCountry) {
+        public void set_originCountry(String originCountry) {
             this.originCountry = originCountry;
         }
     

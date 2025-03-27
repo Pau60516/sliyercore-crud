@@ -40,7 +40,7 @@ public class OrdersProducts {
         this.unitPrice = unitPrice;
      }
 
-     public int getorderProduct_id() {
+     public int getOrderProductId() {
         return orderProduct_id;
      }
 

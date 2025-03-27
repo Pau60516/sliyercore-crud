@@ -1,7 +1,5 @@
 package sena.com.back_end_game.model;
 
-import java.time.format.TextStyle;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,8 +13,8 @@ import jakarta.persistence.ManyToOne;
 public class Products {
        @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="product_id")
-    private int product_id;
+    @Column(name="product_Id")
+    private int product_Id;
 
     @ManyToOne
     @JoinColumn(name = "brand_id", nullable = false)
@@ -33,14 +31,14 @@ public class Products {
     private String color;
     
     @Column(name = "description", nullable = false)
-    private TextStyle description;
+    private String description;
 
     @Column(name = "price", nullable = false)
-    private Number price;
+    private double price;
 
 
-public Products (int product_id, Brands brand, Categories category, String name, String color, TextStyle description, Number price ){
-    this.product_id = product_id;
+public Products (int product_Id, Brands brand, Categories category, String name, String color, String description, double price ){
+    this.product_Id = product_Id;
     this.brand = brand;
     this.category = category;
     this.name = name;
@@ -49,12 +47,12 @@ public Products (int product_id, Brands brand, Categories category, String name,
     this.price = price;
  }
 
- public int getproduct_id() {
-    return product_id;
+ public int getproduct_Id() {
+    return product_Id;
  }
 
- public void setproduct_id(int product_id){
-    this.product_id=product_id;
+ public void setproduct_Id(int product_Id){
+    this.product_Id=product_Id;
  }
 
 public Brands get_brand() {
@@ -89,12 +87,21 @@ public void set_brand(Brands brand){
        this.color=color;
   }
 
-  public TextStyle get_description() {
+  public String get_description() {
     return description;
    }
   
-  public void setdescription(TextStyle description){
+  public void set_description(String description){
        this.description=description;
   }
+
+  public double getPrice() {
+     return price;
+    }
+   
+   public void setPrice(double price){
+        this.price=price;
+
+     }
 
 }

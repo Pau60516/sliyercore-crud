@@ -11,7 +11,7 @@ import jakarta.persistence.JoinColumn;
 public class ProductsSuppliers {
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
-   private int Productsupplier_id;
+   private int productSupplier_id;
 
    @ManyToOne
    @JoinColumn(name = "product_id", nullable = false)
@@ -22,18 +22,18 @@ public class ProductsSuppliers {
    private Suppliers supplier;
 
 
-   public ProductsSuppliers (int Productsupplier_id, Products product, Suppliers supplier ){
-        this.Productsupplier_id = Productsupplier_id;
+   public ProductsSuppliers (int productSupplier_id, Products product, Suppliers supplier ){
+        this.productSupplier_id = productSupplier_id;
         this.product = product;
         this.supplier = supplier;
    }
 
-   public int getProductsupplier_id() {
-      return Productsupplier_id;
+   public int getproductSupplier_id() {
+      return productSupplier_id;
    }
 
-   public void setProductsupplier_id(int Productsupplier_id) {
-      this.Productsupplier_id = Productsupplier_id;
+   public void setproductSupplier_id(int productSupplier_id) {
+      this.productSupplier_id = productSupplier_id;
    }
 
    public Products get_product() {

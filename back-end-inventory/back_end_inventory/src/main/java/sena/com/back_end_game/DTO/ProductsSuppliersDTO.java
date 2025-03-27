@@ -3,23 +3,23 @@ package sena.com.back_end_game.DTO;
 import sena.com.back_end_game.model.Products;
 import sena.com.back_end_game.model.Suppliers;
 
-public class ProductsSupplierDTO {
+public class ProductsSuppliersDTO {
 
     private int productSupplierId;
     private Products product;
     private Suppliers supplier;
 
-    public ProductsSupplierDTO(int productSupplierId, Products product, Suppliers supplier) {
+    public ProductsSuppliersDTO(int productSupplierId, Products product, Suppliers supplier) {
         this.productSupplierId = productSupplierId;
         this.product = product;
         this.supplier = supplier;
     }
 
-    public int getProductSupplierId() {
+    public int getproductSupplier_Id() {
         return productSupplierId;
     }
 
-    public void setProductSupplierId(int productSupplierId) {
+    public void setproductSupplier_Id(int productSupplierId) {
         this.productSupplierId = productSupplierId;
     }
 
